@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 import guestBookRoute from "./routes/guestBook.route.js";
+import guestListRoute from "./routes/guestList.route.js";
 
 const app = express();
 dotenv.config();
@@ -30,6 +31,7 @@ app.use(express.json({ extended: false }));
 app.use(cookieParser());
 
 app.use("/api/guestbook", guestBookRoute);
+app.use("/api/guestlist", guestListRoute);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
