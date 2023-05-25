@@ -25,7 +25,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://weeding-guestlist-vd73.vercel.app",
+      "https://wedding-guestlist.vercel.app/",
     ],
     credentials: true,
   })
