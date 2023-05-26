@@ -26,6 +26,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://wedding-guestlist.vercel.app",
+      "https://weeding-theme1.vercel.app"
     ],
     credentials: true,
   })
