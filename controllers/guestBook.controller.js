@@ -17,7 +17,9 @@ export const guestAdd = async (req, res, next) => {
 
 export const guestGet = async (req, res, next) => {
   try {
-    const guest = await GuestBook.find();
+    const guest = await GuestBook.find().sort({
+      createdAt: "descending",
+    });
 
     res.status(200).json({
       data: guest,

@@ -21,16 +21,7 @@ const connect = async () => {
   }
 };
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:3000",
-      "https://wedding-guestlist.vercel.app",
-      "https://weeding-theme1.vercel.app"
-    ],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json({ extended: false }));
 app.use(cookieParser());
 
